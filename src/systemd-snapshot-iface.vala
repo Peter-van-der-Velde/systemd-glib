@@ -20,9 +20,9 @@
 public interface Systemd.Snapshot : DBusProxy, Unit
 {
     /* Methods */
-    public abstract async void remove(Cancellable? cancellable = null) throws IOError;
+    public abstract async void remove(Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
     [DBus (name = "Remove")]
-    public abstract void remove_sync(Cancellable? cancellable = null) throws IOError;
+    public abstract void remove_sync(Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
 
     /* Properties */
     public abstract bool cleanup { get; }

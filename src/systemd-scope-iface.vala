@@ -20,9 +20,9 @@
 public interface Systemd.Scope : DBusProxy, Unit
 {
     /* Methods */
-    public abstract async void abandon(Cancellable? cancellable = null) throws IOError;
+    public abstract async void abandon(Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
     [DBus (name = "abandon")]
-    public abstract void abandon_sync(Cancellable? cancellable = null) throws IOError;
+    public abstract void abandon_sync(Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
 
     /* Signals */
     public signal void request_stop();

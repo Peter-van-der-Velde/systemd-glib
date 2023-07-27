@@ -26,9 +26,9 @@ public struct Systemd.JobUnitInfo
 public interface Systemd.Job : DBusProxy
 {
     /* Methods */
-    public abstract async void cancel(Cancellable? cancellable = null) throws IOError;
+    public abstract async void cancel(Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
     [DBus (name = "cancel")]
-    public abstract void cancel_sync(Cancellable? cancellable = null) throws IOError;
+    public abstract void cancel_sync(Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
 
     /* Properties */
     public abstract uint32 id { get; }

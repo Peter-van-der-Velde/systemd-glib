@@ -131,40 +131,40 @@ public interface Unit : DBusProxy
 {
     /* Methods */
     public abstract async ObjectPath start(UnitStartMode mode = Systemd.UnitStartMode.REPLACE,
-                                           Cancellable? cancellable = null) throws IOError;
+                                           Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
     [DBus (name = "Start")]
     public abstract ObjectPath start_sync(UnitStartMode mode = Systemd.UnitStartMode.REPLACE,
-                                          Cancellable? cancellable = null) throws IOError;
+                                          Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
 
     public abstract async ObjectPath stop(UnitStartMode mode = Systemd.UnitStartMode.REPLACE,
-                                          Cancellable? cancellable = null) throws IOError;
+                                          Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
     [DBus (name = "Stop")]
     public abstract ObjectPath stop_sync(UnitStartMode mode = Systemd.UnitStartMode.REPLACE,
-                                         Cancellable? cancellable = null) throws IOError;
+                                         Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
 
     public abstract async ObjectPath restart(UnitStartMode mode = Systemd.UnitStartMode.REPLACE,
-                                             Cancellable? cancellable = null) throws IOError;
+                                             Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
     [DBus (name = "Restart")]
     public abstract ObjectPath restart_sync(UnitStartMode mode = Systemd.UnitStartMode.REPLACE,
-                                            Cancellable? cancellable = null) throws IOError;
+                                            Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
 
     public abstract async ObjectPath try_restart(UnitStartMode mode = Systemd.UnitStartMode.REPLACE,
-                                                 Cancellable? cancellable = null) throws IOError;
+                                                 Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
     [DBus (name = "TryRestart")]
     public abstract ObjectPath try_restart_sync(UnitStartMode mode = Systemd.UnitStartMode.REPLACE,
-                                                Cancellable? cancellable = null) throws IOError;
+                                                Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
 
     public abstract async ObjectPath reload_or_restart(UnitStartMode mode = Systemd.UnitStartMode.REPLACE,
-                                                      Cancellable? cancellable = null) throws IOError;
+                                                      Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
     [DBus (name = "ReloadOrRestart")]
     public abstract ObjectPath reload_or_restart_sync(UnitStartMode mode = Systemd.UnitStartMode.REPLACE,
-                                                      Cancellable? cancellable = null) throws IOError;
+                                                      Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
 
     public abstract async ObjectPath reload_or_try_restart(UnitStartMode mode = Systemd.UnitStartMode.REPLACE,
-                                                           Cancellable? cancellable = null) throws IOError;
+                                                           Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
     [DBus (name = "ReloadOrTryRestart")]
     public abstract ObjectPath reload_or_try_restart_sync(UnitStartMode mode = Systemd.UnitStartMode.REPLACE,
-                                                          Cancellable? cancellable = null) throws IOError;
+                                                          Cancellable? cancellable = null) throws GLib.DBusError, GLib.IOError;
 
     /* Properties */
     public abstract string id { owned get; }
