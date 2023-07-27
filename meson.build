@@ -1,10 +1,15 @@
 # AC_INIT(systemd-glib, 1.0)
 project('systemd-glib', 'vala', 'c', version: '1.0')
 
+
+glib_dep  = dependency('glib-2.0')
+go_ob_dep = dependency('gobject-2.0')
+gio_dep   = dependency('gio-unix-2.0')
+
 dependencies = [
-  dependency('glib-2.0'),
-  dependency('gobject-2.0'),
-  dependency('gio-unix-2.0')
+  glib_dep,
+  go_ob_dep,
+  gio_dep
 ]
 
 # AC_CONFIG_HEADERS([config.h])
